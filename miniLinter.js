@@ -5,6 +5,17 @@ const story = 'Last weekend, I took literally the most beautiful bike ride of my
 //gather some information about the individual words and sentences in STORY
 //split the string into individual words
 const storyWords = story.split(' ')
-console.log(storyWords.length)
-console.log(storyWords[0]) //Last
-console.log(storyWords[storyWords.length - 1])//end
+
+//iterate over storyWordsarray to filter out unnecessary words 
+const unnecessaryWords = ['extremely', 'literally', 'actually' ]
+let betterWords = storyWords.filter(
+    storyWord => storyWord !== unnecessaryWords[0] && storyWord !== unnecessaryWords[1] && storyWord !== unnecessaryWords[2]
+)
+console.log(betterWords.length)//182
+
+//remove overUsed words
+const overusedWords = ['really', 'very', 'basically'];
+betterWords = betterWords.filter(
+    betterWord => betterWord !== overusedWords[0] && betterWord !== overusedWords[1] && betterWord !== overusedWords[2]
+)
+console.log(betterWords.length)//174
