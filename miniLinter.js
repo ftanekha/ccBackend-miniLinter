@@ -19,3 +19,12 @@ betterWords = betterWords.filter(
     betterWord => betterWord !== overusedWords[0] && betterWord !== overusedWords[1] && betterWord !== overusedWords[2]
 )
 console.log(betterWords.length)//174
+
+//count how many sentences are in the paragraph
+//using the full stop sign/ period seems easiest
+const numberOfPeriods = betterWords.filter(betterWord => betterWord.includes('.'))
+console.log(numberOfPeriods.length)//9 
+
+//log the improved array/ betterWords as a single paragraph again
+betterWords = betterWords.join(' ')
+console.log(betterWords)// :)
